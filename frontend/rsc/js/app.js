@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const mainContent = document.getElementById("mainContent");
 
   const isMobile = window.innerWidth <= 600;
-  const API_BASE_URL = "https://haby.casacocchy.duckdns.org";
+  const API_BASE_URL = "https://haby.cocchy.casa";
   let habitMap = {}; 
   let togglingHabits = new Set(); 
 
@@ -139,11 +139,11 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => response.json())
       .then((data) => {
         window.location.href =
-          data.redirectUrl || "https://habit.casacocchy.duckdns.org";
+          data.redirectUrl || "https://habit.cocchy.casa";
       })
       .catch((error) => {
         console.error("Logout error:", error);
-        window.location.href = "https://habit.casacocchy.duckdns.org";
+        window.location.href = "https://habit.cocchy.casa";
       });
   });
 

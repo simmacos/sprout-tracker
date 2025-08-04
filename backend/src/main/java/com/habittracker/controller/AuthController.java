@@ -66,7 +66,7 @@ public class AuthController {
                 userDetails.put("authenticated", true);
     
                 // Assicuriamoci che gli header CORS siano presenti
-                response.setHeader("Access-Control-Allow-Origin", "https://habit.casacocchy.duckdns.org");
+                response.setHeader("Access-Control-Allow-Origin", "https://habit.cocchy.casa");
                 response.setHeader("Access-Control-Allow-Credentials", "true");
     
                 return ResponseEntity.ok(userDetails);

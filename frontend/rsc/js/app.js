@@ -397,6 +397,7 @@ function createHabitCard(habit) {
       checkbox.addEventListener("change", function () {
         const habitId = this.closest(".habit-card").dataset.id;
         toggleHabitCompletion(habitId);
+        playSound();
       });
     });
 
@@ -408,6 +409,11 @@ function createHabitCard(habit) {
         }
       });
     });
+  }
+
+  function playSound() {
+    const audio = new Audio("pop.mp3"); // Cambia con il percorso del tuo suono
+    audio.play().catch(e => console.log("Errore nel riprodurre l'audio:", e)); // Gestisce eventuali errori (es. utente non ha interagito ancora)
   }
 
   async function toggleHabitCompletion(habitId) {

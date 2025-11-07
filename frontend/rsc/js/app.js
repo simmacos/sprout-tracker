@@ -412,7 +412,7 @@ function createHabitCard(habit) {
   }
 
   function playSound() {
-    const audio = new Audio("pop.mp3"); // Cambia con il percorso del tuo suono
+    const audio = new Audio("rsc/js/pop.mp3"); // Percorso aggiornato
     audio.play().catch(e => console.log("Errore nel riprodurre l'audio:", e)); // Gestisce eventuali errori (es. utente non ha interagito ancora)
   }
 
